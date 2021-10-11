@@ -25,7 +25,7 @@ class Calculator {
     if (!Number.isInteger(valueX) || !Number.isInteger(valueY)) {
       throw new Error();
     };
-    
+
     if (!typeof BigInt(1) === 'bigint') {
       throw new Error();
     };
@@ -46,21 +46,21 @@ class Calculator {
   };
 
   logSum() {
-    return this.valueX + this.valueY;
+    console.log(this.valueX + this.valueY);
   };
 
   logSub() {
-    return this.valueX - this.valueY;
+    console.log(this.valueX - this.valueY);
   };
 
   logMul() {
-    return this.valueX * this.valueY;
+    console.log(this.valueX * this.valueY);
   };
 
   logDiv() {
     if (this.valueY === 0) {
       throw new Error();
     };
-    return this.valueX / this.valueY;
+    console.log(this.valueX / this.valueY);
   };
 };
