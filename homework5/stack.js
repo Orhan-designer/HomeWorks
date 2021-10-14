@@ -70,6 +70,9 @@ class Stack {
   };
 
   static fromIterable(iterable) {
+    if (newStack[Symbol.iterator()]) {
+      throw new Error();
+    };
     let newStack = new Stack();
     newStack.countElements = iterable.countElements;
     newStack.stackLength = iterable.stackLength;
